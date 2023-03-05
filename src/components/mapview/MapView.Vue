@@ -37,4 +37,8 @@
     width: 100vw;
     height: 100vh;
 }
+
+h1, p{
+    text-align: center;
+}
 </style>
