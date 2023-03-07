@@ -6,7 +6,7 @@
             <h5>Nombre del lugar</h5>
             <p>Lorem ipsum...</p>
             <div align="right">
-                <button class="btn btn-outline-primary">Direcciones</button>
+                <button class="btn btn-outline-primary btn-sm">Direcciones</button>
             </div>
 
         </li>
@@ -19,5 +19,13 @@
 <style scoped>
 li{
     cursor: pointer;
+}
+
+h5{
+    font-size: 15px;
+}
+
+p{
+    font-size: 10px;
 }
 </style>
