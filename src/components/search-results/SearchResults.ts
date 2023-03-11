@@ -8,8 +8,14 @@ export default defineComponent({
     setup(){
 
         const { isLoadingPlaces, places } = usePlacesStore()
-        const { map } = useMapStore()
+        const { map, setPlaceMarkers } = useMapStore()
         const activePlace = ref('')
+
+        watch( places, (newPlaces) => {
+            // convertir lugares en marcadores en las mutaciones del mapa
+            activePlace.value = ''
+            setPlaceMarkers(newPlaces)
+        } )
 
 
         return{
