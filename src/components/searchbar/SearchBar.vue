@@ -4,19 +4,16 @@
     <div class="searchbar-container">
         <input class="form-control" type="text" placeholder="Buscar lugares..." v-model="searchTerm"/>
 
-        {{ searcherValue }}
-
         <SearchResults/>
     </div>
 
-    
     
 </template>
 
 <style scoped>
 .searchbar-container{
     position: fixed;
-    top: 30px;
+    top: 25px;
     left: 30px;
     background-color: white;
     z-index: 999;

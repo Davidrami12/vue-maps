@@ -25,9 +25,6 @@
             </div>
 
         </li>
-        <li class="list-group-item list-group-item-action">1</li>
-        <li class="list-group-item list-group-item-action">2</li>
-        <li class="list-group-item list-group-item-action">3</li>
     </ul>
 
 </template>
