@@ -9,6 +9,8 @@ const mutation: MutationTree<MapState> = {
         state.map = map;
     },
 
+
+
     setPlaceMarkers( state, places: Feature[] ){
 
         if(!state.map) return;
@@ -32,7 +34,17 @@ const mutation: MutationTree<MapState> = {
             
             state.markers.push(marker)
         }
+
+        // Borrar polyline
+        if(state.map.getLayer('RouteString')){
+            state.map.removeLayer('RouteString')
+            state.map.removeSource('RouteString')
+            state.distance = undefined
+            state.duration = undefined
+        }
     },
+
+
 
     setRoutePolyline( state, coords: number[][] ){
 
