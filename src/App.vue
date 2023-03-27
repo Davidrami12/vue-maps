@@ -33,14 +33,4 @@ right: 30px;
 width: 100px;
 }
 
-/*h1{
-  text-align: center;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(1, 89, 1);
-  background-color: red IMP !important;
-  z-index: -1;
-  display: inline IMPO !important;
-}*/
-
 </style>

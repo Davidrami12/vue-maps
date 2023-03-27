@@ -1,7 +1,7 @@
 <template>
     <div v-if="distance" class="trip-container column">
-        <div class="col">Distancia: <strong>{{ distance }} kms</strong></div>
-        <div class="col">Duración: <strong>{{ duration }} minutos</strong></div>
+        <div class="col">Distancia: <strong>{{ distance }} Kms</strong></div>
+        <div class="col">Duración: <strong>{{ duration }} Horas</strong></div>
     </div>
 </template>
 
