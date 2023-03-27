@@ -32,6 +32,68 @@ const mutation: MutationTree<MapState> = {
             
             state.markers.push(marker)
         }
+    },
+
+    setRoutePolyline( state, coords: number[][] ){
+
+        const start = coords[0];
+        const end = coords[coords.length - 1]
+
+        // Definir los bounds (contenidos del mapa)
+        const bounds = new mapboxgl.LngLatBounds(
+            [start[0], start[1]],
+            [start[0], start[1]],
+        )
+
+        // Agregar cada punto a los bounds
+        for(const coord of coords){
+            const newCoord: [number, number] = [coord[0], coord[1]]
+            bounds.extend(newCoord)
+        }
+
+        state.map?.fitBounds(bounds, {
+            padding: 200
+        })
+
+        // Polyline
+        const sourceData: mapboxgl.AnySourceData = {
+            type: 'geojson',
+            data:{
+                type: 'FeatureCollection',
+                features: [
+                    {
+                        type: 'Feature',
+                        properties: {},
+                        geometry: {
+                            type: 'LineString',
+                            coordinates: coords
+                        }
+                    }
+                ]
+            }
+        }
+
+        if(state.map?.getLayer('RouteString')){
+            state.map.removeLayer('RouteString')
+            state.map.removeSource('RouteString') 
+        }
+
+        state.map?.addSource('RouteString', sourceData)
+
+        state.map?.addLayer({
+            id: 'RouteString',
+            type: 'line',
+            source: 'RouteString',
+            layout: {
+                'line-cap': 'round',
+                'line-join': 'round'
+            },
+            paint: {
+                'line-color': '#41B883',
+                'line-width': 3
+            }
+        })
+        
     }
 }
 
