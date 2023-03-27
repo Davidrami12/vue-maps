@@ -15,8 +15,11 @@ const actions: ActionTree<MapState, StateInterface> = {
 
         commit('setRoutePolyline', resp.data.routes[0].geometry.coordinates)
 
-        // TODO: distancia y duración
-        
+        commit('setDistanceDuration', {
+            distance: resp.data.routes[0].distance,
+            duration: resp.data.routes[0].duration
+        })
+
     }
 }
 
