@@ -68,7 +68,7 @@ yarn run serve
 Open http://localhost:8080 to view it in the browser.
 
 ## Usage
-
+When opening the web, it will firstly ask for your user's location permission, once you request them you will be able to visualize the page, it's as simple to use as Google Maps.
 
 ## Contributing
 <p>This project is under the MIT license, and contributions are welcome. Please feel free to fork, create a feature branch, and submit a pull request. If you want to contribute to this project and make it better, your help is very welcome.</p>
