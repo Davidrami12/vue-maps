@@ -11,9 +11,9 @@
 
 ## Introduction
 
-<p>A web application built using Vue, TypeScript, and the Mapbox API to simulate core functionalities of Google Maps 🗺️. Explore the map, search for places, view details of the most visited locations related to your query, and get directions from your current location to your desired destination.</p>
+<p>🌍 A web application built using Vue, TypeScript, and the Mapbox API to simulate core functionalities of Google Maps 🗺️. Explore the map, search for places, view details of the most visited locations related to your query, and get directions from your current location 📍 to your desired destination.</p>
 
-<p>💻 Deployed on Netlify You can visualize this project at: https://64e9f46ac2bf4d36a3bc5d8c--vue-mapbox-maps.netlify.app/#/</p>
+<p>💻 Deployed on Netlify! You can visualize this project at: https://64e9f46ac2bf4d36a3bc5d8c--vue-mapbox-maps.netlify.app/#/</p>
 
 ## Technologies
 - Vue 3
