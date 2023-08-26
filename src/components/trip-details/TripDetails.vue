@@ -1,7 +1,7 @@
 <template>
     <div v-if="distance" class="trip-container column">
-        <div class="col">Distancia: <strong>{{ distance }} Kms</strong></div>
-        <div class="col">Duración: <strong>{{ duration }} Horas</strong></div>
+        <div class="col">Distance: <strong>{{ distance }} Kms</strong></div>
+        <div class="col">Duration: <strong>{{ duration }} Hours</strong></div>
     </div>
 </template>
 
@@ -28,7 +28,7 @@ export default defineComponent({
 .trip-container{
     padding: 10px;
     position: fixed;
-    bottom: 50px;
+    bottom: 20px;
     left: 20px;
     border-radius: 10px;
     background-color: white;

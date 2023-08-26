@@ -12,7 +12,7 @@ export default defineComponent({
         const activePlace = ref('')
 
         watch( places, (newPlaces) => {
-            // convertir lugares en marcadores en las mutaciones del mapa
+            // Convert places into markers in the map mutations
             activePlace.value = ''
             setPlaceMarkers(newPlaces)
         } )

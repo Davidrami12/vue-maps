@@ -35,7 +35,6 @@ export default defineComponent({
                 .setLngLat(userLocation.value)
                 .addTo(map)
             
-            // Todo: establecer el mapa en Vuex
             setMap( map )
         }
 

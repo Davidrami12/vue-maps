@@ -27,11 +27,11 @@ const mutation: MutationTree<MapState> = {
 
         if(!state.map) return;
         
-        // Borrar marcadores
+        // Remove markers
         state.markers.forEach(marker => marker.remove())
         state.markers = []
     
-        // Crear los nuevos marcadores
+        // Create new markers
         for (const place of places) {
             const [ lng, lat ] = place.center
 
@@ -47,7 +47,7 @@ const mutation: MutationTree<MapState> = {
             state.markers.push(marker)
         }
 
-        // Borrar polyline
+        // Remove polyline
         if(state.map.getLayer('RouteString')){
             state.map.removeLayer('RouteString')
             state.map.removeSource('RouteString')
@@ -63,13 +63,13 @@ const mutation: MutationTree<MapState> = {
         const start = coords[0];
         const end = coords[coords.length - 1]
 
-        // Definir los bounds (contenidos del mapa)
+        // Define bounds (map content)
         const bounds = new mapboxgl.LngLatBounds(
             [start[0], start[1]],
             [start[0], start[1]],
         )
 
-        // Agregar cada punto a los bounds
+        // Add each point to bounds
         for(const coord of coords){
             const newCoord: [number, number] = [coord[0], coord[1]]
             bounds.extend(newCoord)

@@ -8,8 +8,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZGF2aWRyYW1pMTIiLCJhIjoiY2xlcmowN25oMGM4YjN4c
 
 
 if(!navigator.geolocation){
-    alert("Tu navegador no soporta el GeoLocation")
-    throw new Error("Tu navegador no soporta el GeoLocation")
+    alert("Your browser does not support GeoLocation")
+    throw new Error("Your browser does not support GeoLocation")
 }
 
 

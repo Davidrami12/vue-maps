@@ -24,7 +24,7 @@ export default defineComponent({
                 },
                 set(val: string){
 
-                    // cada vez que la persona escriba algo va a limpiar el timeout
+                    // clean time out each time the user searchs something
                     if( searcherTimeout.value ) clearTimeout( searcherTimeout.value )
 
                     searcherTimeout.value = setTimeout(() => {
